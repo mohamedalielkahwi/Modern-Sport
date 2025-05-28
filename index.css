@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #D9D375;
+}
+header{
+    background-color: #222222;
+    color: white;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav{
+    display: flex;
+    justify-content: space-around;
+    width: 300px;
+}
+header nav a{
+    color: white;
+    text-decoration: none;
+    border: 1px solid white;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+header nav a:hover{
+    background-color: white;
+    color: black;
+}
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0;
+}
+.sport-grid{
+    width: 80%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+}
+.cart{
+    box-shadow: -1px -1px 10px black;
+    background-color: #E3A71B;
+    display: flex;
+    flex-direction: column  ;
+    align-items: center;
+    justify-content: center;
+    padding: 5px 10px;
+    text-align: center;
+    border-radius: 15px;
+    transition: all 0.5s ease-in-out;
+}
+.cart img{
+    /* width: 300px;*/
+    height: 150px; 
+    margin: 20px;
+    border-radius: 15px;
+}
+.cart:hover{
+    scale: 1.1;
+}
+footer{
+    padding: 20px;
+    background-color:#222222 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+footer form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+form input,form textarea{
+    margin-top: 10px;
+    width: 80%;
+    max-width: 400px;
+    padding: 5px;
+}
+button{
+    padding: 10px 20px;
+    border-radius: 15px;
+}
+button:hover{
+    background-color: yellowgreen;
+    color: white;
+}
+h1,h2,a,input,textarea{
+    text-transform: capitalize;
+}
+@media (min-width:1024px){
+    .cart,button{
+        cursor: pointer;
+    }
+}
+@media (min-width:768px) and (max-width:1024px){
+    .sport-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+    header{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+}
+@media (max-width:768px){
+    .sport-grid{
+        grid-template-columns: 1fr;
+    }
+    header{
+        flex-direction: column;
+        justify-content: center;
+        gap: 10px;
+    }
+}
