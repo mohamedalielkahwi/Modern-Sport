@@ -118,6 +118,9 @@ h1,h2,a,input,textarea{
     .sport-grid{
         grid-template-columns: 1fr;
     }
+     .cart{
+        width: 90%;
+    }
     header{
         flex-direction: column;
         justify-content: center;
